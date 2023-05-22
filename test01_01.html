@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeImg(){
+            var animalArr = document.getElementsByName("animal");
+            var animalImg = document.getElementById("animalImg");
+            var animalName = "";
+
+            for (var i = 0; i < animalArr.length; i++){
+                if (animalArr[i].checked){
+                    animalImg.src = animalArr[i].value;
+                    animalName = animalArr[i].id;
+                    animalImg.width = 400;
+                    alert("you choosed " + animalName + "\n\n" + animalArr[i].value);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="radio" name="animal" id="CAT" value="imgs/cat.jpg" checked>
+        <label for="CAT">CAT</label>
+        <input type="radio" name="animal" id="MONKEY" value="imgs/monkey.jpg">
+        <label for="MONKEY">MONKEY</label>
+        <input type="radio" name="animal" id="QUOKKA" value="imgs/quokka.jpg">
+        <label for="QUOKKA">QUOKKA</label>
+        <input type="radio" name="animal" id="RACCOON" value="imgs/raccoon.jpg">
+        <label for="RACCOON">RACCOON</label>
+
+        <button id="btn" onclick = "changeImg()" type="button">Choose and Click!</button>
+        <br><br>
+        <img src="imgs/cat.jpg" id="animalImg" width="400px">
+    </form>
+</body>
+</html>
