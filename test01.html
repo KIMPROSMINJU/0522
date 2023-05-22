@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeImg(){
+            var animal = document.getElementById("animal");
+            var animalImg = document.getElementById("animalImg");
+
+            var path = animal.options[animal.selectedIndex].value;
+            var animalName = animal.options[animal.selectedIndex].id;
+
+            alert("you choosed " + animalName + "\n\n" + path);
+            animalImg.src = path;
+            animalImg.width=400;
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <select id="animal">
+            <option value="imgs/cat.jpg" id="CAT">CAT</option>
+            <option value="imgs/monkey.jpg" id="MONKEY">MONKEY</option>
+            <option value="imgs/quokka.jpg" id="QUOKKA">QUOKKA</option>
+            <option value="imgs/raccoon.jpg" id="RACCOON">RACCOON</option>
+        </select>
+        <button id="btn" onclick = "changeImg()" type="button">Choose and Click!</button>
+        <br><br>
+        <img src="imgs/cat.jpg" id="animalImg" width="400px">
+    </form>
+</body>
+</html>
