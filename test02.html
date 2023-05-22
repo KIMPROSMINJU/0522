@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function BMI(){
+            var myName = document.getElementById("myName").innerHTML;
+            var height = document.getElementById("height").innerHTML;
+            var weight = document.getElementById("weight").innerHTML;
+
+            var bmi = weight / Math.pow((height/1.00),2);
+
+            alert(myName + "님의 비만도는 " + bmi + "입니다.");
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <th>이름</th>
+                <td><input id="myName" type="text"></td>
+            </tr>
+            <tr>
+                <th>키</th>
+                <td><input id="height" type="text"></td>
+            </tr>
+            <tr>
+                <th>몸무게</th>
+                <td><input id="weight" type="text"></td>
+            </tr>
+            <tr>
+                <th></th>
+                <td><button id="btn" type="button" onclick="BMI()">비만도 측정!</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
