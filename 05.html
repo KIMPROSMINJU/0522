@@ -17,16 +17,13 @@
         var hEl;
         window.onload = function nowClock(){
             hEl = document.getElementById('clock');
-            setInterval(function (){
-            var now = new Date();
-            hEl.innerHTML = now.toString();
-        }, 1000);
+            setInterval(printClock, 1000);
         }
 
-        // function printClock(){
-        //     var now = new Date();
-        //     hEl.innerHTML = now.toString();
-        // }
+        function printClock(){
+            var now = new Date();
+            hEl.innerHTML = now.toString();
+        }
     </script>
 </head>
 <body>
