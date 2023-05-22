@@ -12,7 +12,11 @@
                 out += "<h1>Header - " + i + "</h1>";
             }
 
-            document.body.innerHTML = out;
+            //document.body.innerHTML = out;
+            // html에 작성되어 실행됨!
+
+            document.body.textContent = out;
+            // text로만 인식!
         }
     </script>
 </head>
